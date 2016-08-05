@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="col-host">
+<table >
+<tr>
+<th>ID</th>
+<th>IP</th>
+<th>HOSTNAME</th>
+<th>GROUP</th>
+<th>CREATE TIME</th>
+</tr>
+{% for host in hosts%}
+  <tr> 
+   <td>{{ host.id }}</td>
+   <td>{{ host.ip }}</td>
+   <td>{{ host.hostname }}</td>
+   <td>{{ host.group }}</td>
+   <td>{{ host.create_time }}</td>
+  </tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}

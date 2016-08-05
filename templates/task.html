@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="col-task">
+<p>执行任务</p>
+<form action="/playbook/" method="get">
+    id: <input type="text" id="a" name="a">
+    role: <select name="roles" id="b"><option value="mysql">mysql</option><option value="redis">redis</option></select>
+    group: <select name="group" id="c"><option value="test">test</option><option value="test1">test1</option></select>
+    <button type="button" id='sum'>提交</button>
+    <button type="button" id="log">日志</button>
+</form>
+</div>
+<hr/>
+<div id="col-result">
+<table id="customers">
+</table>
+</div>
+
+{% endblock %}
